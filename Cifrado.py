@@ -1,4 +1,4 @@
-class CodigoCesarArchivos:
+class Cifrado:
 
     def __init__(self):
         pass
@@ -18,7 +18,7 @@ class CodigoCesarArchivos:
                 abrir = open(archivo, "w")
                 for scannear in leer:
                     alfabeto = ord(scannear)
-                    cifrar += chr(alfabeto - 7)
+                    cifrar += chr(alfabeto - 3)
                 abrir.write(cifrar)
                 print(cifrar)
                 abrir.close()
@@ -26,14 +26,14 @@ class CodigoCesarArchivos:
                 abrir = open(archivo, "w")
                 for scannear in leer:
                     alfabeto = ord(scannear)
-                    descifrar += chr(alfabeto + 7)
+                    descifrar += chr(alfabeto + 3)
                 abrir.write(descifrar)
                 abrir.close()
                 print(descifrar)
-            respuesta = input("Desea cifrar o desifrar otro archivo de texto? ")
+            respuesta = input("Desea continuar con otro texto? ")
             if respuesta == "n":
                 break
 
 
-objeto_cifrado = CodigoCesarArchivos()
+objeto_cifrado = Cifrado()
 objeto_cifrado.cifradoDesifrado()
